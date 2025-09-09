@@ -1,4 +1,4 @@
-package se.iths.philip.project1;
+package se.iths.philip.project1.bil;
 
 public class project1Main {
     public static void main(String[] args) {

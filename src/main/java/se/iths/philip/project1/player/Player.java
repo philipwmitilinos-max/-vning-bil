@@ -1,4 +1,4 @@
-package se.iths.philip.project1;
+package se.iths.philip.project1.player;
 
 public class Player {
     private String name;

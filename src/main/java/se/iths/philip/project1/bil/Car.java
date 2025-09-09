@@ -1,4 +1,4 @@
-package se.iths.philip.project1;
+package se.iths.philip.project1.bil;
 
 public class Car {
     private String brand;
