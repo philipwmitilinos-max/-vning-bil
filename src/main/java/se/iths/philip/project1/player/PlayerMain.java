@@ -10,14 +10,16 @@ public class PlayerMain {
         Scanner sc = new Scanner(System.in);
 
         Random random = new Random();
-
+        System.out.println("Mata in ditt namn: ");
+        String name = sc.nextLine();
+        player.setName(name);
         while (true) {
-            System.out.println("Mata in ditt namn: ");
-            Scanner name = sc.nextLine();
-            player.setName(name);
+
             System.out.println("tryck enter för att slå tärningen");
             sc.nextLine();
-
+            int number = random.nextInt(1, 7);
+            player.setScore(number);
+            System.out.println(player.getScore());
         }
     }
 }
