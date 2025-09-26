@@ -1,22 +1,39 @@
 package se.iths.philip.calculator;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Calculator calc = new Calculator();
 
-        Calculator adder = new Calculator();
-        adder.addition(1, 2);
-        System.out.println(adder.getAdd());
+        System.out.print("Ange första talet: ");
+        double a = scanner.nextDouble();
+        System.out.print("Ange andra talet: ");
+        double b = scanner.nextDouble();
 
-        Calculator sub = new Calculator();
-        sub.subtraction(1, 2);
-        System.out.println(sub.getSub());
+        System.out.print("Välj operation (+, -, *, /): ");
+        String operation = scanner.next();
 
-        Calculator multiplication = new Calculator();
-        multiplication.multiplication(1, 2);
-        System.out.println(multiplication.getMulti());
+        double result;
+        switch (operation) {
+            case "+":
+                result = calc.addition((int) a, (int) b);
+                break;
+            case "-":
+                result = calc.subtraction((int) a, (int) b);
+                break;
+            case "*":
+                result = calc.multiplication((int) a, (int) b);
+                break;
+            case "/":
+                result = calc.division(a, b);
+                break;
+            default:
+                System.out.println("Ogiltig operation!");
+                return;
+        }
 
-        Calculator division = new Calculator();
-        division.division(1, 2);
-        System.out.println(division.getDiv());
+        System.out.println("Resultat: " + result);
     }
 }
