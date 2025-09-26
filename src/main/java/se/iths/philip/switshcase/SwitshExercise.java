@@ -4,18 +4,28 @@ import java.util.Scanner;
 
 public class SwitshExercise {
     public static void main(String[] args) {
-        System.out.println("Tryck: 1 För att spela. 2 För att se statisic. 3 För att avsluta.");
+        System.out.println("Tryck: 1. 2. 3. 4. 5. 6.");
         Scanner scan = new Scanner(System.in);
-        String choice = scan.nextLine();
-        switch (choice) {
-            case "1":
-                System.out.println("");
+        int timme = scan.nextInt();
+        switch (timme) {
+            case 1:
+                System.out.println("Ett");
                 break;
-            case "2":
-                System.out.println("");
+            case 2:
+                System.out.println("Två");
                 break;
-            case "3":
+            case 3:
+                System.out.println("Tre");
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
             default:
+                System.out.println("Ogiltig timme");
+                
         }
     }
 }

@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class PlayerMain {
     public static void main(String[] args) {
         Player player = new Player();
-
         Scanner sc = new Scanner(System.in);
 
         Random random = new Random();
@@ -21,5 +20,6 @@ public class PlayerMain {
             player.setScore(number);
             System.out.println(player.getScore());
         }
+
     }
 }
